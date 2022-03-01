@@ -57,9 +57,16 @@ const details=(id)=>{
         <h6>Sensor:</h6>
         <P>${info.mainFeatures.sensors}</p>
         <h6>Others information:</h6>
-        <p> ${info.others.WLAN}
+        <p>Bluetooth: ${info?.others?.Bluetooth? info.others.Bluetooth:'no result found'}</p>
+        <p>GPS: ${info?.others?.Bluetooth? info.others.Bluetooth:'no result found'}</p>
+        <p>NFC: ${info?.others?.NFC? info.others.NFC :'no result found'}</p>
+        <p>Radio: ${info?.others?.Radio? info.others.Radio:'no result found'}</p>
+        <p>USB: ${info?.others?.USB? info.others.USB:'no result found'}</p>
+        <p>WLAN ${info?.others?.WLAN? info.others.WLAN:'no result found'}</p>
+        
+        
        </div>
 
   `
-  console.log(info)
+  console.log(info.others)
 }
