@@ -1,0 +1,17 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* common styles */
+body{font-family: 'Poppins', sans-serif;
+    background-color: #EAEDED}
+
+/* button */
+.buttons{background-color: rgb(65, 194, 236);
+padding-left: 40px;
+padding-right: 40px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 20px;
+margin-top: 10px;
+border: 0;
+color: aliceblue;
+}
