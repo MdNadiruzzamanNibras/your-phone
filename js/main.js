@@ -30,3 +30,9 @@ const showResult = phones =>{
     })
    
 }
+const details=(id)=>{
+    const url =`https://openapi.programming-hero.com/api/phone/${id}`
+    fetch(url)
+    .then(res=> res.json())
+    .then(data=> setDetails(data.data))
+ }
