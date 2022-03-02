@@ -3,8 +3,8 @@
 /* common styles */
 body{font-family: 'Poppins', sans-serif;
     background-color: #EAEDED}
-
-/* button */
+/* card */
+/*card button */
 .buttons{background-color: rgb(65, 194, 236);
 padding-left: 40px;
 padding-right: 40px;

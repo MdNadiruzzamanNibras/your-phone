@@ -13,8 +13,15 @@ const showResult = phones =>{
     const brandDetail =document.getElementById('brands');
     brandDetail.textContent='';
     if(phones.length===0){
-        return alert('No found device')
+       
+    
+            const div = document.createElement('div')
+           
+            div.innerHTML = `No Phone found
+            `
+            brandDetail.appendChild(div)
     }
+
    else{
        phones.slice(0, 20).forEach(phone=>{
     
