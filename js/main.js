@@ -33,7 +33,7 @@ const showResult = phones =>{
         div.classList.add('col-sm-12');
         div.innerHTML = `<div class="card p-5 my-2 card-display" style="width: 20rem; height:520px ;">
         <div class="pro-pic ">
-            <img class="w-30 img-fluid" src="${phone.image}" alt="">
+            <img class="w-30 img-fluid my-2" src="${phone.image}" alt="">
         </div>
         <h2>Name: ${phone.phone_name}</h2>
         <h5>Brand: ${phone.brand}</h5>
@@ -60,25 +60,26 @@ const details=(id)=>{
  const setDetails=(info)=>{
    
   const details =document.getElementById("details")
+  details.classList.add('m-2');
   details.textContent='';
   details.innerHTML=`
   <div class="px-auto center mx-auto">
         <div class="pro-pic ">
-            <img class="w-30 img-fluid" src="${info.image}" alt="">
+            <img class="w-30 img-fluid my-2" src="${info.image}" alt="">
         </div>
         <h2><span class="fw-bold">Name: </span>${info.name}</h2>
-        <p> <span class="fs-6">Release Date: </span>${info.releaseDate ?? 'not found'}</p>
-        <h4<span class="fw-bold">Brand: </span>${info.brand}</h4>
-        <h6 class="fs-5"> Memory Storage <br> 
-        Capacity:</h6>
-        <P>${info.mainFeatures.storage}  </p>
+        <p> <span class="fs-5">Release Date: </span>${info.releaseDate ?? 'not found'}</p>
+        <h4><span class="fw-bold">Brand: </span>${info.brand}</h4>
+        <h5 class="fs-5"> Memory Storage <br> 
+        Capacity:</h5>
+        <p>${info.mainFeatures.storage}  </p>
         
         <h6 class="fs-5">Display Size:</h6>
         <p>${info?.mainFeatures?.displaySize ??'not found'}</p>
         <h6 class="fs-5">Sensor:</h6>
-        <P>${info?.mainFeatures?.sensors ??'Not found'}</p>
-        <h5 class="fs-5" >Others information:</h6>
-        <p><span class="fs-6">Chip Set: </span>${info.mainFeatures?.chipSet ??'not found '}</p>
+        <p>${info?.mainFeatures?.sensors ??'Not found'}</p>
+        <h5 class="fs-5 fw-bold" >Others information:</h6>
+        <span class="fs-6">Chip Set: </h6><p>${info.mainFeatures?.chipSet ??'not found '}</p>
         <p><span class="fs-6">WLAN: </span> ${info.others?.WLAN ??'not found '}</p>
         <p><span class="fs-6">Bluetooth: </span>${info.others?.Bluetooth ??'not found '}</p>
         <p><span class="fs-6">GPS: </span>${info.others?.GPS ??'not found '}</p>
