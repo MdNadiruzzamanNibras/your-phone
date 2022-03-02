@@ -68,12 +68,12 @@ const details=(id)=>{
             <img class="w-30 img-fluid my-2" src="${info.image}" alt="">
         </div>
         <h2><span class="fw-bold">Name: </span>${info.name}</h2>
-        <p> <span class="fs-5">Release Date: </span>${info.releaseDate ?? 'not found'}</p>
+        <p> <span class="fs-5">Release Date: </span>${info.releaseDate ??'not found'}</p>
         <h4><span class="fw-bold">Brand: </span>${info.brand}</h4>
         <h5 class="fs-5"> Memory Storage <br> 
         Capacity:</h5>
-        <p>${info.mainFeatures.storage}  </p>
-        
+        <p>${info.mainFeatures?.storage ??"not found"}  </p>
+        <p><span class="fs-6">Memory: </span>${info.mainFeatures?.memory ??'not found '}</p>
         <h6 class="fs-5">Display Size:</h6>
         <p>${info?.mainFeatures?.displaySize ??'not found'}</p>
         <h6 class="fs-5">Sensor:</h6>
@@ -87,6 +87,7 @@ const details=(id)=>{
         <p><span class="fs-6">Radio: </span>${info.others?.Radio ??'not found '}</p>
         <p><span class="fs-6">USB: </span>${info.others?.USB ??'not found '}</p>
         
+        
        </div> `
- 
+ console.log(info)
 }
