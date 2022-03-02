@@ -79,7 +79,7 @@ const details=(id)=>{
         <h6 class="fs-5">Sensor:</h6>
         <p>${info?.mainFeatures?.sensors ??'Not found'}</p>
         <h5 class="fs-5 fw-bold" >Others information:</h6>
-        <span class="fs-6">Chip Set: </h6><p>${info.mainFeatures?.chipSet ??'not found '}</p>
+        <p><span class="fs-6">Chip Set: </span>${info.mainFeatures?.chipSet ??'not found '}</p>
         <p><span class="fs-6">WLAN: </span> ${info.others?.WLAN ??'not found '}</p>
         <p><span class="fs-6">Bluetooth: </span>${info.others?.Bluetooth ??'not found '}</p>
         <p><span class="fs-6">GPS: </span>${info.others?.GPS ??'not found '}</p>
