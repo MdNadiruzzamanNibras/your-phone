@@ -14,10 +14,10 @@ const showResult = phones =>{
     brandDetail.textContent='';
     if(phones.length===0){
        
-    
+       
             const div = document.createElement('div')
            
-            div.innerHTML = `No Phone found
+            div.innerHTML = `<h1 class="fs-1 fw-bolder bg-white py-5 text-uppercase text-center text-danger">No Phone found</h1>
             `
             brandDetail.appendChild(div)
     }
@@ -28,7 +28,7 @@ const showResult = phones =>{
         const div = document.createElement('div')
         div.classList.add('col-lg-4');
         div.classList.add('col-sm-12');
-        div.innerHTML = `<div class="card p-5 my-2 rounded" style="width: 18rem; height:500px ;">
+        div.innerHTML = `<div class="card p-5 my-2 card-display" style="width: 18rem; height:500px ;">
         <div class="pro-pic ">
             <img class="w-30 img-fluid" src="${phone.image}" alt="">
         </div>
@@ -60,24 +60,25 @@ const details=(id)=>{
             <img class="w-30 img-fluid" src="${info.image}" alt="">
         </div>
         <h2>Name: ${info.name}</h2>
-        <p> Release Date:${info?.releaseDate? info.releaseDate:'not found'}</p>
+        <p> Release Date:${info.releaseDate ?? 'not found'}</p>
         <h4>Brand: ${info.brand}</h4>
         <div class="d-fex justify-content-center"><div> <h6> Memory Storage <br> 
         Capacity:</h6></div> 
         <div><P>${info.mainFeatures.storage}  </p></div>
         </div>
         <h6>Display Size:</h6>
-        <p>${info? info.mainFeatures.displaySize:'not found'}</p>
+        <p>${info?.mainFeatures?.displaySize ??'not found'}</p>
         <h6>Sensor:</h6>
-        <P>${info.mainFeatures.sensors}</p>
+        <P>${info?.mainFeatures?.sensors ??'Not found'}</p>
         <h6>Others information:</h6>
-        <p>Chip Set: ${info?.mainFeatures?.chipSet? info.mainFeatures.chipSet:'not found '}</p>
-        <p>Bluetooth: ${info?.others?.Bluetooth? info.others.Bluetooth:'not found '}</p>
-        <p>GPS: ${info?.others?.Bluetooth? info.others.Bluetooth:'not found '}</p>
-        <p>NFC: ${info?.others?.NFC? info.others.NFC :'not found '}</p>
-        <p>Radio: ${info?.others?.Radio? info.others.Radio:'not found '}</p>
-        <p>USB: ${info?.others?.USB? info.others.USB:'not found '}</p>
-        <p>WLAN ${info?.others?.WLAN? info.others.WLAN:'not found '}</p>
+        <p>Chip Set: ${info.mainFeatures?.chipSet ??'not found '}</p>
+        <p>WLAN: ${info.others?.WLAN ??'not found '}</p>
+        <p>Bluetooth: ${info.others?.Bluetooth ??'not found '}</p>
+        <p>GPS: ${info.others?.GPS ??'not found '}</p>
+        <p>NFC: ${info.others?.NFC ??'not found '}</p>
+        <p>Radio: ${info.others?.Radio ??'not found '}</p>
+        <p>USB: ${info.others?.USB ??'not found '}</p>
+        
         
        </div>
 
