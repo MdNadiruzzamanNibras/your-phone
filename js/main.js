@@ -73,12 +73,13 @@ const details=(id)=>{
         <h5 class="fs-5"> Memory Storage <br> 
         Capacity:</h5>
         <p>${info.mainFeatures?.storage ??"not found"}  </p>
-        <p><span class="fs-6">Memory: </span>${info.mainFeatures?.memory ??'not found '}</p>
+       
         <h6 class="fs-5">Display Size:</h6>
         <p>${info?.mainFeatures?.displaySize ??'not found'}</p>
         <h6 class="fs-5">Sensor:</h6>
         <p>${info?.mainFeatures?.sensors ??'Not found'}</p>
         <h5 class="fs-5 fw-bold" >Others information:</h6>
+        <p><span class="fs-6">Memory: </span>${info.mainFeatures?.memory ??'not found '}</p>
         <p><span class="fs-6">Chip Set: </span>${info.mainFeatures?.chipSet ??'not found '}</p>
         <p><span class="fs-6">WLAN: </span> ${info.others?.WLAN ??'not found '}</p>
         <p><span class="fs-6">Bluetooth: </span>${info.others?.Bluetooth ??'not found '}</p>
