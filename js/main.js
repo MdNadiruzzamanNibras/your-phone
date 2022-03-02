@@ -90,5 +90,5 @@ const details=(id)=>{
         
         
        </div> `
- console.log(info)
+ 
 }
