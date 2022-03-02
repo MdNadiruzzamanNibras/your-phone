@@ -1,8 +1,16 @@
 /* fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /* common styles */
 body{font-family: 'Poppins', sans-serif;
-    background-color: #EAEDED}
+    background-color: #F1F3F4}
+    
+
+/* heading */
+.heading{
+    color:#76a4ce;
+}
+
 /* card */
 /*card button */
 .buttons{background-color: rgb(65, 194, 236);
@@ -15,6 +23,7 @@ margin-top: 10px;
 border: 0;
 color: aliceblue;
 }
+/* card border  */
 .card-display{
     border-radius: 10px;
 }
